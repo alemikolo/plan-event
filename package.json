@@ -1,0 +1,17 @@
+{
+  "name": "plan-event",
+  "private": true,
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lerna-c": "lerna create",
+    "lerna-b": "lerna bootstrap"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "3.16.5"
+  }
+}
