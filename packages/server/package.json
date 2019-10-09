@@ -1,20 +1,20 @@
 {
   "name": "plan-event-server",
-  "version": "0.1.0",
   "description": "Plan An Event Server",
+  "version": "0.1.0",
   "author": "Aleksander Fret",
-  "homepage": "https://github.com/alemikolo/plan-event#readme",
   "license": "ISC",
   "main": "src/index.ts",
-  "directories": {
-    "src": "src",
-    "test": "__tests__"
-  },
+  "homepage": "https://github.com/alemikolo/plan-event#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alemikolo/plan-event.git"
   },
   "bugs": {
     "url": "https://github.com/alemikolo/plan-event/issues"
+  },
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
   }
 }
