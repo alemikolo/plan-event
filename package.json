@@ -14,8 +14,8 @@
     "url": "https://github.com/alemikolo/plan-event/issues"
   },
   "scripts": {
-    "lerna-c": "lerna create",
-    "lerna-b": "lerna bootstrap"
+    "create": "lerna create",
+    "bootstrap": "lerna bootstrap"
   },
   "devDependencies": {
     "lerna": "3.16.5"

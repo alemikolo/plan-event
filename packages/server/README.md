@@ -1,1 +1,1 @@
-# Plan An Event Server
+# Plan An Event - Server

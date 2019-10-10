@@ -1,1 +1,1 @@
-# Plan An Event Web App
+# Plan An Event - Browser

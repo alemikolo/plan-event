@@ -1,6 +1,6 @@
 {
-  "name": "plan-event-web",
-  "description": "Plan An Event Web App",
+  "name": "plan-event-browser",
+  "description": "Plan An Event - Browser",
   "version": "0.1.0",
   "author": "Aleksander Fret",
   "license": "ISC",
