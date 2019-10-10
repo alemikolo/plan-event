@@ -1,0 +1,23 @@
+{
+  "name": "plan-event",
+  "description": "Plan and organize your events",
+  "version": "0.1.0",
+  "author": "Aleksander Fret",
+  "license": "ISC",
+  "private": true,
+  "homepage": "https://github.com/alemikolo/plan-event#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alemikolo/plan-event.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alemikolo/plan-event/issues"
+  },
+  "scripts": {
+    "create": "lerna create",
+    "bootstrap": "lerna bootstrap"
+  },
+  "devDependencies": {
+    "lerna": "3.16.5"
+  }
+}
