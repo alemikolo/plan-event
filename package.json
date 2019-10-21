@@ -14,10 +14,13 @@
     "url": "https://github.com/alemikolo/plan-event/issues"
   },
   "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
     "create": "lerna create",
-    "bootstrap": "lerna bootstrap"
+    "dev": "lerna run dev",
+    "lint": "lerna run lint"
   },
   "devDependencies": {
-    "lerna": "3.16.5"
+    "lerna": "3.17.0"
   }
 }
