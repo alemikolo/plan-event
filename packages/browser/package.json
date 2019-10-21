@@ -14,8 +14,9 @@
     "url": "https://github.com/alemikolo/plan-event/issues"
   },
   "directories": {
-    "src": "src",
-    "test": "__tests__"
+    "public": "public",
+    "test": "tests",
+    "src": "src"
   },
   "scripts": {
     "build": "webpack --progress --config ./webpack.config.prod.js",

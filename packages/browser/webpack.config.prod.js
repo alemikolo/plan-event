@@ -58,7 +58,7 @@ module.exports = {
               sourceMap: true,
               sassOptions: {
                 indentWidth: 2,
-                includePaths: ['./src/app/scss']
+                includePaths: ['./src/app/scss/base', './src/app/scss/partials']
               }
             }
           }
