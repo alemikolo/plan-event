@@ -17,10 +17,10 @@
     "bootstrap": "lerna bootstrap --hoist",
     "build": "lerna run build",
     "create": "lerna create",
-    "dev": "lerna run dev",
+    "dev": "lerna run dev --stream",
     "lint": "lerna run lint"
   },
   "devDependencies": {
-    "lerna": "3.17.0"
+    "lerna": "3.18.1"
   }
 }
