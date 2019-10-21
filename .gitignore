@@ -1,5 +1,6 @@
-node_modules
-dist
 .vscode/
+dist
+node_modules
 
 .env
+packages/server/src/config
