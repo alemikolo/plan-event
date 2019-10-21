@@ -19,20 +19,22 @@
   },
   "scripts": {
     "build": "tsc --build tsconfig.prod.json",
-    "dev": "TS_NODE_PROJECT='./tsconfig.dev.json' ts-node-dev --respawn ./src src/index.ts",
+    "dev": "ts-node-dev --project ./tsconfig.dev.json --respawn --transpileOnly ./src/index.ts",
     "lint": "eslint . --ext \".js,.ts\"",
     "orm": "sequelize init"
   },
   "dependencies": {
     "body-parser": "1.19.0",
+    "cors": "2.8.5",
     "express": "4.17.1",
     "mysql": "2.17.1",
-    "sequelize": "5.19.7"
+    "sequelize": "5.21.1"
   },
   "devDependencies": {
     "@types/body-parser": "1.17.1",
+    "@types/cors": "2.8.6",
     "@types/express": "4.17.1",
-    "@types/node": "12.7.12",
+    "@types/node": "12.11.1",
     "@types/sequelize": "4.28.6",
     "@typescript-eslint/eslint-plugin": "2.4.0",
     "@typescript-eslint/parser": "2.4.0",
