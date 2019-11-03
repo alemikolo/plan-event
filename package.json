@@ -14,13 +14,15 @@
     "url": "https://github.com/alemikolo/plan-event/issues"
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "create": "lerna create",
     "dev": "lerna run dev --stream",
-    "lint": "lerna run lint"
+    "lint": "lerna run lint",
+    "postinstall": "npm run bootstrap",
+    "reset": "lerna clean --yes && npm ci"
   },
   "devDependencies": {
-    "lerna": "3.18.2"
+    "lerna": "3.18.3"
   }
 }
