@@ -3,7 +3,7 @@ import cors from 'cors';
 import express from 'express';
 import path from 'path';
 
-import eventRouter from '../services/event/routes';
+import eventRouter from '../modules/event/routes';
 
 const initApp = (app: express.Application): express.Application => {
   app.use(cors({ credentials: true, origin: true }));
