@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-import { EventStatus, EventVisibility } from '../../../common/enums';
+import { EventStatus, EventVisibility } from '../enums';
 
 @Entity()
 export class Event {
