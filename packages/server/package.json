@@ -20,15 +20,14 @@
   "scripts": {
     "build": "tsc --build tsconfig.prod.json",
     "dev": "ts-node-dev --project ./tsconfig.dev.json --respawn --transpileOnly ./src/index.ts",
-    "lint": "eslint . --ext \".js,.ts\"",
-    "orm": "sequelize init"
+    "lint": "eslint . --ext \".js,.ts\""
   },
   "dependencies": {
     "body-parser": "1.19.0",
     "cors": "2.8.5",
     "express": "4.17.1",
     "mysql2": "2.0.0",
-    "sequelize": "5.21.2"
+    "typeorm": "0.2.20"
   },
   "devDependencies": {
     "@types/body-parser": "1.17.1",
@@ -43,7 +42,6 @@
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-prettier": "3.1.1",
     "prettier": "1.18.2",
-    "sequelize-cli": "5.5.1",
     "ts-node-dev": "1.0.0-pre.44",
     "typescript": "3.6.4"
   }
