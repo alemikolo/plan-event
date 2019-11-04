@@ -1,11 +1,11 @@
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import express from 'express';
+import express, { Application } from 'express';
 import path from 'path';
 
 import eventRouter from '../modules/event/routes';
 
-const initApp = (app: express.Application): express.Application => {
+const initApp = (app: Application): Application => {
   app.use(cors({ credentials: true, origin: true }));
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: false }));
