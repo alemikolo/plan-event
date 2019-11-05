@@ -2,8 +2,12 @@
   "name": "plan-event",
   "description": "Plan and organize your events",
   "version": "0.1.0",
-  "author": "Aleksander Fret",
-  "license": "ISC",
+  "author": {
+    "name": "Aleksander Fret",
+    "email": "olekfret80@gmail.com",
+    "url": "https://github.com/alemikolo/"
+  },
+  "license": "MIT",
   "private": true,
   "homepage": "https://github.com/alemikolo/plan-event#readme",
   "repository": {

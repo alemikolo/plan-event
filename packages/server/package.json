@@ -2,8 +2,12 @@
   "name": "plan-event-server",
   "description": "Plan An Event - Server",
   "version": "0.1.0",
-  "author": "Aleksander Fret",
-  "license": "ISC",
+  "author": {
+    "name": "Aleksander Fret",
+    "email": "olekfret80@gmail.com",
+    "url": "https://github.com/alemikolo/"
+  },
+  "license": "MIT",
   "main": "src/index.ts",
   "homepage": "https://github.com/alemikolo/plan-event#readme",
   "repository": {
