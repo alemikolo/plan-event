@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "alemikolo",
+      "name": "Aleksander Fret",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/25374390?v=4",
+      "profile": "http://www.aleksander.fret.com.pl",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "plan-event",
+  "projectOwner": "alemikolo",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
