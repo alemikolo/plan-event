@@ -9,7 +9,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore -->
 <table>
   <tr>
-    <td align="center"><a href="http://www.aleksander.fret.com.pl"><img src="https://avatars0.githubusercontent.com/u/25374390?v=4" width="100px;" alt="Aleksander Fret"/><br /><sub><b>Aleksander Fret</b></sub></a><br /><a href="https://github.com/alemikolo/plan-event/commits?author=alemikolo" title="Code">💻</a></td>
+    <td align="center"><a href="http://www.aleksander.fret.com.pl"><img src="https://avatars0.githubusercontent.com/u/25374390?v=4" width="100px;" alt="Aleksander Fret"/><br /><sub><b>Aleksander Fret</b></sub></a><br /><a href="https://github.com/alemikolo/plan-event/commits?author=alemikolo" title="Code">💻</a> <a href="#ideas-alemikolo" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
