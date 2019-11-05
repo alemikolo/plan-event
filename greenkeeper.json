@@ -1,0 +1,13 @@
+{
+  "groups": {
+    "root": {
+      "packages": ["package.json"]
+    },
+    "frontend": {
+      "packages": ["packages/browser/package.json"]
+    },
+    "backend": {
+      "packages": ["packages/browser/package.json"]
+    }
+  }
+}
