@@ -15,17 +15,18 @@
   },
   "directories": {
     "src": "src",
-    "test": "__tests__"
+    "test": "tests"
   },
   "scripts": {
     "build": "tsc --build tsconfig.prod.json",
-    "dev": "ts-node-dev --project ./tsconfig.dev.json --respawn --transpileOnly ./src/index.ts",
+    "dev": "ts-node-dev --project ./tsconfig.json --respawn --transpileOnly ./src/index.ts",
     "lint": "eslint . --ext \".js,.ts\""
   },
   "dependencies": {
     "body-parser": "1.19.0",
     "cors": "2.8.5",
     "express": "4.17.1",
+    "module-alias": "2.2.2",
     "mysql2": "2.0.0",
     "typeorm": "0.2.20"
   },
@@ -39,10 +40,15 @@
     "eslint": "6.6.0",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-config-prettier": "6.5.0",
+    "eslint-import-resolver-alias": "1.1.2",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-prettier": "3.1.1",
     "prettier": "1.18.2",
     "ts-node-dev": "1.0.0-pre.44",
     "typescript": "3.6.4"
+  },
+  "_moduleAliases": {
+    "@common": "src/common",
+    "@modules": "src/modules"
   }
 }
