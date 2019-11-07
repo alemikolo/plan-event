@@ -1,6 +1,6 @@
 export enum Crud {
-  delete = 'delete',
-  get = 'get',
-  patch = 'patch',
-  post = 'post'
+  DELETE = 'delete',
+  GET = 'get',
+  PATCH = 'patch',
+  POST = 'post'
 }
