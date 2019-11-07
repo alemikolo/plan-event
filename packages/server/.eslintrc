@@ -97,5 +97,13 @@
     ],
     "space-in-parens": ["error", "never"],
     "space-infix-ops": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["@common", "./src/common"], ["@modules", "./src/modules"]],
+        "extensions": [".ts", ".js", ".json"]
+      }
+    }
   }
 }

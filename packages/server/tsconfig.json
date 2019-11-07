@@ -27,12 +27,16 @@
     "noImplicitThis": true,
     "noUnusedParameters": true,
     "outDir": "../../dist",
+    "paths": {
+      "@common/*": ["common/*"],
+      "@modules/*": ["modules/*"]
+    },
     "removeComments": true,
     "sourceMap": true,
     "strict": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
-    "target": "ES5"
+    "target": "ES6"
   },
   "exclude": ["node_modules"],
   "include": ["./src/**/*.ts"]
