@@ -71,6 +71,9 @@ module.exports = {
     inline: true,
     hot: true,
     disableHostCheck: true,
+    proxy: {
+      '/api': 'http://localhost:8080'
+    },
     watchOptions: {
       ignored: /node_modules/
     },

@@ -55,7 +55,6 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
               sassOptions: {
                 indentWidth: 2,
                 includePaths: ['./src/app/scss/base', './src/app/scss/partials']
