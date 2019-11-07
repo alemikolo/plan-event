@@ -19,7 +19,9 @@
   },
   "scripts": {
     "build": "tsc --build tsconfig.prod.json",
+    "check": "npm-run-all lint format",
     "dev": "ts-node-dev --project ./tsconfig.json --respawn --transpileOnly ./src/index.ts",
+    "format": "prettier --check \"src/**/*.{js,ts}\"",
     "lint": "eslint . --ext \".js,.ts\""
   },
   "dependencies": {
@@ -43,6 +45,7 @@
     "eslint-import-resolver-alias": "1.1.2",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-prettier": "3.1.1",
+    "lint-staged": "9.4.2",
     "prettier": "1.18.2",
     "ts-node-dev": "1.0.0-pre.44",
     "typescript": "3.6.4"
@@ -50,5 +53,18 @@
   "_moduleAliases": {
     "@common": "src/common",
     "@modules": "src/modules"
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{ts,tsx,js,jsx,json,md}, !*.min.js": [
+        "prettier --write",
+        "git add"
+      ],
+      "*.{js,jsx,ts,tsx}, !*.min.js": [
+        "eslint -c .eslintrc --fix",
+        "echo test",
+        "git add"
+      ]
+    }
   }
 }
