@@ -1,9 +1,5 @@
 #!/bin/sh
 
-COMMIT_MSG_FILE=$1
-COMMIT_SOURCE=$2
-SHA1=$3
-
 /usr/bin/perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
 
 if [ -z "$BRANCHES_TO_SKIP" ]; then
