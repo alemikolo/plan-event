@@ -16,13 +16,21 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
+    "check": "lerna run check",
     "create": "lerna create",
     "dev": "lerna run dev --stream",
-    "lint": "lerna run lint",
     "postinstall": "npm run bootstrap",
     "reset": "lerna clean --yes && npm ci"
   },
   "devDependencies": {
-    "lerna": "3.18.3"
+    "husky": "3.0.9",
+    "lerna": "3.18.3",
+    "lint-staged": "9.4.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run check",
+      "pre-push": "npm run check"
+    }
   }
 }
