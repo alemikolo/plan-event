@@ -20,13 +20,20 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
+    "check": "lerna run check",
     "create": "lerna create",
     "dev": "lerna run dev --stream",
-    "lint": "lerna run lint",
     "postinstall": "npm run bootstrap",
     "reset": "lerna clean --yes && npm ci"
   },
   "devDependencies": {
+    "husky": "3.0.9",
     "lerna": "3.18.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run precommit --concurrency 1 --stream ",
+      "pre-push": "npm run check"
+    }
   }
 }
