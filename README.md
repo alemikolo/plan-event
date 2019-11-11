@@ -1,5 +1,6 @@
 # Plan An Event
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors) [![Greenkeeper badge](https://badges.greenkeeper.io/alemikolo/plan-event.svg)](https://greenkeeper.io/)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-blue.svg?style=flat-square)](#contributors) [![Greenkeeper badge](https://badges.greenkeeper.io/alemikolo/plan-event.svg)](https://greenkeeper.io/)
+![last commit](https://img.shields.io/github/last-commit/alemikolo/plan-event)
 
 ## Contributors ✨
 
