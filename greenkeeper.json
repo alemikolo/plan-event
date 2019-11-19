@@ -7,7 +7,7 @@
       "packages": ["packages/browser/package.json"]
     },
     "backend": {
-      "packages": ["packages/browser/package.json"]
+      "packages": ["packages/server/package.json"]
     }
   }
 }
