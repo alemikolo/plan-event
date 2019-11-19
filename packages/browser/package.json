@@ -35,8 +35,8 @@
     "stylelint:fix": "stylelint src/**/*.scss --cache --fix"
   },
   "dependencies": {
-    "react": "16.11.0",
-    "react-dom": "16.11.0"
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
   },
   "devDependencies": {
     "@types/html-webpack-plugin": "3.2.1",
