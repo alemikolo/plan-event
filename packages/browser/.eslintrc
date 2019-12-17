@@ -42,6 +42,16 @@
     "func-call-spacing": ["error", "never"],
     "func-names": ["error", "never"],
     "import/default": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "import/first": "error",
     "import/named": "error",
     "import/namespace": "error",

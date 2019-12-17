@@ -14,7 +14,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "import"],
+  "plugins": ["@typescript-eslint", "import", "prettier"],
   "rules": {
     "array-bracket-spacing": ["error", "never"],
     "arrow-parens": ["error", "as-needed"],
@@ -34,6 +34,14 @@
     "func-call-spacing": ["error", "never"],
     "func-names": ["error", "never"],
     "import/default": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "ts": "never"
+      }
+    ],
     "import/first": "error",
     "import/named": "error",
     "import/namespace": "error",
@@ -101,7 +109,10 @@
   "settings": {
     "import/resolver": {
       "alias": {
-        "map": [["@common", "./src/common"], ["@modules", "./src/modules"]],
+        "map": [
+          ["@common", "./src/common"],
+          ["@modules", "./src/modules"]
+        ],
         "extensions": [".ts", ".js", ".json"]
       }
     }
