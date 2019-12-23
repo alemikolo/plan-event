@@ -37,7 +37,7 @@
     "express": "4.17.1",
     "module-alias": "2.2.2",
     "mysql2": "2.0.2",
-    "typeorm": "0.2.21"
+    "typeorm": "0.2.22"
   },
   "devDependencies": {
     "@types/body-parser": "1.17.1",
