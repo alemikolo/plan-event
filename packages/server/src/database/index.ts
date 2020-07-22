@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { createConnection, getConnection } from 'typeorm';
 
 /* eslint-disable no-console */
