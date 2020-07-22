@@ -5,17 +5,17 @@
   "author": {
     "name": "Aleksander Fret",
     "email": "olekfret80@gmail.com",
-    "url": "https://github.com/alemikolo/"
+    "url": "https://github.com/aleksanderfret/"
   },
   "license": "MIT",
   "main": "src/index.ts",
-  "homepage": "https://github.com/alemikolo/plan-event#readme",
+  "homepage": "https://github.com/aleksanderfret/plan-event#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alemikolo/plan-event.git"
+    "url": "git+https://github.com/aleksanderfret/plan-event.git"
   },
   "bugs": {
-    "url": "https://github.com/alemikolo/plan-event/issues"
+    "url": "https://github.com/aleksanderfret/plan-event/issues"
   },
   "directories": {
     "src": "src",
