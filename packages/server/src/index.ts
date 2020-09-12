@@ -1,4 +1,5 @@
 import http from 'http';
+import 'reflect-metadata';
 import 'module-alias/register';
 
 import app from './app';

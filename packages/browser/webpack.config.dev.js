@@ -11,11 +11,11 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, '../../dist/public'),
-    publicPath: '/'
+    publicPath: '/',
   },
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'tests', 'node_modules'],
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
   },
   module: {
     rules: [
@@ -25,9 +25,9 @@ module.exports = {
         use: {
           loader: 'ts-loader',
           options: {
-            configFile: 'tsconfig.json'
-          }
-        }
+            configFile: 'tsconfig.json',
+          },
+        },
       },
       {
         test: /\.s?css$/,
@@ -41,15 +41,15 @@ module.exports = {
               localsConvention: 'camelCaseOnly',
               sourceMap: true,
               modules: {
-                localIdentName: '[name]__[local]__[hash:base64:5]'
-              }
-            }
+                localIdentName: '[name]__[local]__[hash:base64:5]',
+              },
+            },
           },
           {
             loader: 'postcss-loader',
             options: {
-              plugins: [autoprefixer]
-            }
+              plugins: [autoprefixer],
+            },
           },
           {
             loader: 'sass-loader',
@@ -57,13 +57,16 @@ module.exports = {
               sourceMap: true,
               sassOptions: {
                 indentWidth: 2,
-                includePaths: ['./src/app/scss/base', './src/app/scss/partials']
-              }
-            }
-          }
-        ]
-      }
-    ]
+                includePaths: [
+                  './src/app/scss/base',
+                  './src/app/scss/partials',
+                ],
+              },
+            },
+          },
+        ],
+      },
+    ],
   },
   devServer: {
     port: 3000,
@@ -72,17 +75,17 @@ module.exports = {
     hot: true,
     disableHostCheck: true,
     proxy: {
-      '/api': 'http://localhost:8080'
+      '/api': 'http://localhost:8080',
     },
     watchOptions: {
-      ignored: /node_modules/
+      ignored: /node_modules/,
     },
-    historyApiFallback: true
+    historyApiFallback: true,
   },
   plugins: [
     new CleanWebpackPlugin({ verbose: true }),
     new HtmlWebPackPlugin({
-      template: './public/index.html'
-    })
-  ]
+      template: './public/index.html',
+    }),
+  ],
 };

@@ -1,34 +1,50 @@
 {
   "env": {
-    "es6": true,
-    "node": true
+    "node": true,
+    "es6": true
   },
   "extends": [
-    "airbnb-base",
-    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
     "plugin:import/typescript"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "typescript": true,
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint", "import", "prettier"],
+  "root": true,
   "rules": {
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "enumMember",
+        "format": ["UPPER_CASE"]
+      }
+    ],
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-unused-vars": [2, { "ignoreRestSiblings": true }],
     "array-bracket-spacing": ["error", "never"],
     "arrow-parens": ["error", "as-needed"],
     "arrow-spacing": ["error", { "before": true, "after": true }],
     "block-spacing": ["warn"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": ["warn", "never"],
     "comma-spacing": ["warn"],
-    "@typescript-eslint/consistent-type-assertions": [
-      "error",
-      {
-        "assertionStyle": "angle-bracket"
-      }
-    ],
     "computed-property-spacing": ["error", "never"],
     "eqeqeq": ["error", "smart"],
     "func-call-spacing": ["error", "never"],
@@ -64,17 +80,11 @@
       }
     ],
     "import/prefer-default-export": "off",
-    "implicit-arrow-linebreak": "off",
     "indent": ["error", 2],
     "key-spacing": "error",
     "keyword-spacing": ["error", { "before": true, "after": true }],
-    "lines-between-class-members": [
-      "error",
-      "always",
-      { "exceptAfterSingleLine": true }
-    ],
     "newline-before-return": ["error"],
-    "no-console": "error",
+    "no-console": [2, { "allow": ["info", "error"] }],
     "no-debugger": ["warn"],
     "no-else-return": "error",
     "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
@@ -110,8 +120,10 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["@common", "./src/common"],
-          ["@modules", "./src/modules"]
+          ["@app", "./src/app"],
+          ["@db", "./src/db"],
+          ["@modules", "./src/modules"],
+          ["@shared", "./src/shared"]
         ],
         "extensions": [".ts", ".js", ".json"]
       }
