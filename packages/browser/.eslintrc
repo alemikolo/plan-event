@@ -1,11 +1,14 @@
 {
   "env": {
     "browser": true,
-    "es2020": true
+    "es6": true
   },
   "extends": [
-    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
     "plugin:import/typescript"
   ],
   "globals": {
@@ -28,13 +31,29 @@
     "import",
     "jsx-a11y"
   ],
+  "root": true,
   "rules": {
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"]
+      }
+    ],
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-unused-vars": [2, { "ignoreRestSiblings": true }],
+    "react/prop-types": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "array-bracket-spacing": ["error", "never"],
     "arrow-parens": ["error", "as-needed"],
     "arrow-spacing": ["error", { "before": true, "after": true }],
     "block-spacing": ["warn"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": ["warn", "never"],
     "comma-spacing": ["warn"],
     "computed-property-spacing": ["error", "never"],
     "eqeqeq": ["error", "smart"],
@@ -77,7 +96,7 @@
     "key-spacing": "error",
     "keyword-spacing": ["error", { "before": true, "after": true }],
     "newline-before-return": ["error"],
-    "no-console": "error",
+    "no-console": [2, { "allow": ["warn", "error"] }],
     "no-debugger": ["warn"],
     "no-else-return": "error",
     "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
@@ -88,7 +107,8 @@
       "warn",
       { "vars": "local", "args": "none", "ignoreRestSiblings": true }
     ],
-    "no-use-before-define": "error",
+    "no-use-before-define": 0,
+    "@typescript-eslint/no-use-before-define": ["error"],
     "no-var": "error",
     "object-curly-spacing": ["error", "always"],
     "prefer-arrow-callback": "error",
@@ -101,7 +121,8 @@
       "error",
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
-    "react/prop-types": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
     "semi": ["warn", "always"],
     "space-before-blocks": "error",
     "space-before-function-paren": [
@@ -114,5 +135,10 @@
     ],
     "space-in-parens": ["error", "never"],
     "space-infix-ops": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

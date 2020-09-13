@@ -1,15 +1,15 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const autoprefixer = require('autoprefixer');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
+import autoprefixer from 'autoprefixer';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import { Configuration as WebpackConfiguration } from 'webpack';
+import HtmlWebPackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
+import path from 'path';
+import TerserPlugin from 'terser-webpack-plugin';
 
-module.exports = {
+const config: WebpackConfiguration = {
   mode: 'production',
-  entry: './src/app/index.tsx',
+  entry: './src/index.tsx',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, '../../dist/public'),
@@ -37,27 +37,23 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-modules-typescript-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              localsConvention: 'camelCaseOnly',
-              modules: {
-                localIdentName: '[name]__[local]__[hash:base64:5]'
-              }
-            }
-          },
+          'css-loader',
           {
             loader: 'postcss-loader',
             options: {
-              plugins: [autoprefixer]
+              postcssOptions: {
+                plugins: [autoprefixer]
+              }
             }
           },
           {
             loader: 'sass-loader',
             options: {
+              sourceMap: true,
+              implementation: require('sass'),
               sassOptions: {
                 indentWidth: 2,
-                includePaths: ['./src/app/scss/base', './src/app/scss/partials']
+                includePaths: ['./src/app/scss']
               }
             }
           }
@@ -79,8 +75,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.[hash].css'
     }),
-    new HtmlWebPackPlugin({
-      template: './public/index.html'
-    })
+    new HtmlWebPackPlugin({ template: path.resolve('public/index.html') })
   ]
 };
+
+export default config;
