@@ -24,12 +24,15 @@
   "scripts": {
     "build": "tsc --build tsconfig.prod.json",
     "check": "npm-run-all lint format",
+    "compile": "tsc -p tsconfig.prod.json",
     "dev": "ts-node-dev --project ./tsconfig.json --watch --respawn --transpile-only ./src/index.ts",
     "format": "prettier --check \"src/**/*.{js,ts}\"",
     "format:fix": "prettier --write \"src/**/*.{js,ts}\"",
     "lint": "eslint . --ext \".js,.ts\"",
     "lint:fix": "eslint ./ --ext \".js,.ts\" --max-warnings=0 --fix",
-    "precommit": "lint-staged"
+    "pre-commit": "lint-staged && npm run test",
+    "pre-push": "npm-run-all check test",
+    "test": "echo 'No tests Found!'"
   },
   "dependencies": {
     "body-parser": "1.19.0",
