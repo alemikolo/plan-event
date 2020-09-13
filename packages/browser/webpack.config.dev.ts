@@ -1,12 +1,17 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const autoprefixer = require('autoprefixer');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const path = require('path');
+import autoprefixer from 'autoprefixer';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import HtmlWebPackPlugin from 'html-webpack-plugin';
+import path from 'path';
+import { Configuration as WebpackConfiguration } from 'webpack';
+import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 
-module.exports = {
+interface IConfiguration extends WebpackConfiguration {
+  devServer?: WebpackDevServerConfiguration;
+}
+
+const config: IConfiguration = {
   mode: 'development',
-  entry: './src/app/index.tsx',
+  entry: './src/index.tsx',
   devtool: 'inline-source-map',
   output: {
     filename: 'bundle.js',
@@ -34,31 +39,24 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           'style-loader',
-          'css-modules-typescript-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              localsConvention: 'camelCaseOnly',
-              sourceMap: true,
-              modules: {
-                localIdentName: '[name]__[local]__[hash:base64:5]'
-              }
-            }
-          },
+          'css-loader',
           {
             loader: 'postcss-loader',
             options: {
-              plugins: [autoprefixer]
+              postcssOptions: {
+                plugins: [autoprefixer]
+              }
             }
           },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
+              implementation: require('sass'),
               sassOptions: {
                 indentWidth: 2,
-                includePaths: ['./src/app/scss/base', './src/app/scss/partials']
-              }
+                includePaths: ['./src/app/scss']
+              },
+              sourceMap: true
             }
           }
         ]
@@ -66,7 +64,7 @@ module.exports = {
     ]
   },
   devServer: {
-    port: 3000,
+    port: 4000,
     open: true,
     inline: true,
     hot: true,
@@ -81,8 +79,8 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin({ verbose: true }),
-    new HtmlWebPackPlugin({
-      template: './public/index.html'
-    })
+    new HtmlWebPackPlugin({ template: path.resolve('public/index.html') })
   ]
 };
+
+export default config;

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React, { FC } from 'react';
 
-import classes from './Layout.scss';
+import './Layout.scss';
 
 const getEvents = (): void => {
   fetch('/api/event/get', { method: 'GET' })
@@ -11,8 +11,9 @@ const getEvents = (): void => {
 };
 
 const Layout: FC = () => (
-  <div className={classes.layout}>
+  <div className="layout">
     <h1>Plan Event App</h1>
+    <p>Create your own event ęóąśłżźćń</p>
     <button type="button" onClick={getEvents}>
       server test
     </button>

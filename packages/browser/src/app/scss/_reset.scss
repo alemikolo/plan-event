@@ -1,7 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* http://meyerweb.com/eric/tools/css/reset/ */
+
+/* v1.0 | 20080212 */
 
 html,
 body,
@@ -29,6 +28,7 @@ code,
 del,
 dfn,
 em,
+font,
 img,
 ins,
 kbd,
@@ -63,66 +63,46 @@ tfoot,
 thead,
 tr,
 th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+td {
   margin: 0;
   padding: 0;
   border: 0;
-  font: inherit;
+  outline: 0;
   font-size: 100%;
   vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: '';
-  content: none;
 }
+
+:focus {
+  outline: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;

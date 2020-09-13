@@ -1,5 +1,2 @@
-// reset
-@import 'reset';
-
-// partials
-@import 'partials';
+@use 'reset';
+@use 'global';
